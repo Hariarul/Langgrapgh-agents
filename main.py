@@ -37,3 +37,5 @@ app.get_graph().draw_mermaid_png(output_file_path="flow.png")
 
 if __name__ == "__main__":
     print("ReAct agent")
+    res = app.invoke({"messages":HumanMessage(content="what is the whether in new york?list it and then triple it" )})
+    print(res["messages"][LAST].content)
